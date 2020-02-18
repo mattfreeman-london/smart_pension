@@ -18,5 +18,15 @@ describe Page do
       page = Page.new
       expect(page.count('/home,/home,/home')).to eq('/home 3 visits')
     end
+
+    it 'can count one instance of two different pages' do
+      page = Page.new
+      expect(page.count('/home,/about')).to eq('/home 1 visit, /about 1 visit')
+    end
+
+    it 'can count multiple instances of two different pages' do
+      page = Page.new
+      expect(page.count('/home,/home,/about,/about')).to eq('/home 2 visits, /about 2 visits')
+    end
   end
 end
