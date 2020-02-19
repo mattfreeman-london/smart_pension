@@ -6,18 +6,12 @@ class Page
     entries = log.split(',')
     home = entries.count('/home')
     about = entries.count('/about')
-    if home == 1 && about.zero?
-      "/home #{home} visit"
-    elsif home >= 2 && about.zero?
-      "/home #{home} visits"
-    elsif home.zero? && about == 1
-      "/about #{about} visit"
-    elsif home.zero? && about >= 2
-      "/about #{about} visits"
-    elsif home == 1 && about == 1
-      "/home #{home} visit, /about #{about} visit"
+    if home >= 1 && about.zero?
+      "/home - visits #{home}"
+    elsif home.zero? && about >= 1
+      "/about - visits #{about}"
     else
-      "/home #{home} visits, /about #{about} visits"
+      "/home - visits #{home}, /about - visits #{about}"
     end
   end
 end
