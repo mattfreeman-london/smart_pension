@@ -26,7 +26,7 @@ describe Page do
 
     it 'can count multiple instances of two different pages' do
       page = Page.new
-      expect(page.count('/home,/home,/about,/about')).to eq('/home - visits 2, /about - visits 2')
+      expect(page.count('/home,/about,/home,/about')).to eq('/home - visits 2, /about - visits 2')
     end
   end
 end
