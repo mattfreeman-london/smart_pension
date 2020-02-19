@@ -4,7 +4,7 @@ require 'page'
 
 describe Page do
   describe '#count' do
-    let (:page) { Page.new }
+    let(:page) { Page.new }
     it 'counts a single page view' do
       expect(page.count('/home')).to eq('/home - visits 1')
     end
