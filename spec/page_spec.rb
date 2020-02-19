@@ -14,11 +14,6 @@ describe Page do
       expect(page.count('/about')).to eq('/about - visits 1')
     end
 
-    it 'counts more than one view of the same page' do
-      page = Page.new
-      expect(page.count('/home,/home')).to eq('/home - visits 2')
-    end
-
     it 'can count any number of views of one page' do
       page = Page.new
       expect(page.count('/home,/home,/home')).to eq('/home - visits 3')
