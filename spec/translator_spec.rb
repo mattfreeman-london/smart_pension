@@ -15,4 +15,10 @@ describe Translator do
       expect(translator.string_to_array('/home_page 814\n/about 345\n')).to eq(['/home_page 814', '/about 345'])
     end
   end
+
+  describe '#array_to_hash' do
+    it 'creates a hash from the array' do
+      expect(translator.array_to_hash(['/home_page 814', '/about 345'])).to eq({'/home_page' => '814', '/about' => '345'})
+    end
+  end
 end

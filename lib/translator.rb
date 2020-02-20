@@ -15,4 +15,8 @@ class Translator
     array = string.split('\n')
     array
   end
+
+  def array_to_hash(array)
+    array.map { |i| i.split ' ' }.to_h
+  end
 end
