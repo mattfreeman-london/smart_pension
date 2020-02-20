@@ -6,3 +6,8 @@ def get_file_as_string(filename)
   end
   return data
 end
+
+def string_to_array(string)
+  array = string.split('\n')
+  return array
+end
