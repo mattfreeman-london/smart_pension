@@ -10,26 +10,26 @@ Goals:
 
 ### Instructions given
 
-Write a program that receives a log file as an argument (webserver.log is provided) e.g.: ./<parse> webserver.log.
+Write a program that receives a log file as an argument (webserver.log is provided).
 
-Returns the following:
-- list of webpages with most page views ordered from most pages views to less page views, for example:
+It must return the following:
+- a list of webpages with most page views, ordered from most to least, for example:
   * /home 90 visits
   * /index 80 visits
 
-- list of webpages with most unique page views also ordered, for example:
+- a list of webpages with most unique page views, also ordered, for example:
   * /about/2 8 unique views
-  * /index 5 unique views etc...
+  * /index 5 unique views
 
 ### Tech used:
 
 Ruby
 
-Gems used:
+### Gems used:
 
-Rspec - for testing
-Rubocop - to help with styling and catch simple errors in syntax
-Simplecov - to automate checking for full test coverage
+- Rspec (for testing)
+- Rubocop (for styling)
+- Simplecov (to automate checking for full test coverage)
 
 ### To install Gems:
 
@@ -40,6 +40,10 @@ Simplecov - to automate checking for full test coverage
 ```$ rspec```
 
 This will also show test coverage via the Simplecov gem.
+
+You can also run Rubocop:
+
+```$ rubocop```
 
 ### Next steps:
 
