@@ -18,7 +18,7 @@ describe Translator do
 
   describe '#array_to_hash' do
     it 'creates a hash from the array' do
-      expect(translator.array_to_hash(['/home_page 814', '/about 345'])).to eq({'/home_page' => '814', '/about' => '345'})
+      expect(translator.array_to_hash(['/home_page 814', '/about 345'])).to eq('/home_page' => '814', '/about' => '345')
     end
   end
 end
